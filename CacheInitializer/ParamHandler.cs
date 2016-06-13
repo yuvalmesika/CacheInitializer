@@ -32,6 +32,26 @@ namespace CacheInitializer
          HelpText = "values to select e.g  \"France\",\"Germany\",\"Spain\"")]
         public string selectionvalues { get; set; }
 
+        [Option('p', "proxy", Required = false,
+        HelpText = "Using Virtual Proxy")]
+        public string usingProxy { get; set; }
+
+        [Option('u', "user", Required = false,
+        HelpText = "user")]
+        public string User { get; set; }
+
+        [Option('d', "directory", Required = false,
+        HelpText = "directory")]
+        public string Directory { get; set; }
+
+        [Option('h', "staticheader", Required = false,
+        HelpText = "Using static header")]
+        public string staticHeader { get; set; }
+
+        [Option('c', "directconnection", Required = false,
+        HelpText = "Direct connection")]
+        public bool directConnection { get; set; }
+
         [ParserState]
         public IParserState LastParserState { get; set; }
 
